@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./zsh
+    ./nvf
 
     ./git.nix
     ./gh.nix
