@@ -3,14 +3,15 @@
   outputs,
   ...
 }: {
-  imports = [
-    inputs.home-manager.nixosModules.home-manager
-    ./tailscale.nix
-    ./nix.nix
-    ./openssh.nix
-    ./zsh.nix
-  ]
-  ++ (builtins.attrValues outputs.nixosModules);
+  imports =
+    [
+      inputs.home-manager.nixosModules.home-manager
+      ./tailscale.nix
+      ./nix.nix
+      ./openssh.nix
+      ./zsh.nix
+    ]
+    ++ (builtins.attrValues outputs.nixosModules);
 
   home-manager.useGlobalPkgs = true;
   home-manager.extraSpecialArgs = {inherit inputs outputs;};
@@ -21,4 +22,6 @@
       allowUnfree = true;
     };
   };
+
+  environment.enableAllTerminfo = true;
 }
