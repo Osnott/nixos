@@ -8,6 +8,8 @@
 
     ../common/global
     ../common/users/osnott
+
+    ../common/optional/motd.nix
   ];
 
   networking.hostName = "taffy";
