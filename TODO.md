@@ -1,5 +1,9 @@
 # TODO
 
+## flake
+
+- [ ] fix flake systems building, use [nix-systems](https://github.com/nix-systems/default-linux) as input
+
 ## hosts
 
 ### taffy
