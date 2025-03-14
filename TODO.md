@@ -2,7 +2,7 @@
 
 ## flake
 
-- [ ] fix flake systems building, use [nix-systems](https://github.com/nix-systems/default-linux) as input
+- [x] fix flake systems building, use [nix-systems](https://github.com/nix-systems/default-linux) as input
 
 ## hosts
 
