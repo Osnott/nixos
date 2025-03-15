@@ -20,8 +20,13 @@ in {
       lsl = mkIf hasEza "eza -l --icons";
       lsa = mkIf hasEza "eza -a --icons";
 
+      nr = "nixos-rebuild --flake .";
       nrs = "nixos-rebuild switch --flake .";
+      snr = "sudo nixos-rebuild --flake .";
       snrs = "sudo nixos-rebuild switch --flake .";
+
+      hm = "home-manager --flake .";
+      hms = "home-manager --flake . switch";
     };
   };
 }
