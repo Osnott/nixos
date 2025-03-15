@@ -2,14 +2,12 @@
   lib,
   config,
   ...
-}:
-# let
-#  inherit (lib) mkIf;
-#  packageNames = map (p: p.pname or p.name or null) config.home.packages;
-#  hasPackage = name: lib.any (x: x == name) packageNames;
-#  hasEza = hasPackage "eza";
-#in
-{
+}: let
+  inherit (lib) mkIf;
+  packageNames = map (p: p.pname or p.name or null) config.home.packages;
+  hasPackage = name: lib.any (x: x == name) packageNames;
+  hasEza = hasPackage "eza";
+in {
   imports = [
     ./starship.nix
   ];
@@ -18,12 +16,17 @@
     enable = true;
 
     shellAliases = {
-      ls = "eza --icons";
-      lsl = "eza -l --icons";
-      lsa = "eza -a --icons";
+      ls = mkIf hasEza "eza --icons";
+      lsl = mkIf hasEza "eza -l --icons";
+      lsa = mkIf hasEza "eza -a --icons";
 
+      nr = "nixos-rebuild --flake .";
       nrs = "nixos-rebuild switch --flake .";
+      snr = "sudo nixos-rebuild --flake .";
       snrs = "sudo nixos-rebuild switch --flake .";
+
+      hm = "home-manager --flake .";
+      hms = "home-manager --flake . switch";
     };
   };
 }

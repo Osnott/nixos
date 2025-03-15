@@ -1,10 +1,4 @@
-{
-  pkgs,
-  inputs,
-  outputs,
-  config,
-  ...
-}: {
+{pkgs, ...}: {
   /*
      packages = with pkgs; [
     rust-motd # motd configuration program

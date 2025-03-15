@@ -1,9 +1,4 @@
 {
-  inputs,
-  outputs,
-  config,
-  ...
-}: {
   programs.gh = {
     enable = true;
 

@@ -60,7 +60,14 @@
           neo-tree.enable = true;
         };
 
-        tabline.nvimBufferline.enable = true;
+        tabline.nvimBufferline = {
+          enable = true;
+
+          setupOpts.options = {
+            numbers = "none";
+            seperator_style = "slant";
+          };
+        };
 
         binds = {
           whichKey.enable = true;
@@ -84,6 +91,7 @@
           toggleterm = {
             enable = true;
             lazygit.enable = true;
+            setupOpts.direction = "float";
           };
         };
 
@@ -100,6 +108,8 @@
 
           fastaction.enable = true;
         };
+
+        mini.icons.enable = true;
 
         comments = {
           comment-nvim.enable = true;
@@ -127,28 +137,7 @@
             mode = ["n"];
             action = ":Neotree focus<CR>";
             silent = true;
-            desc = "Open Neotree";
-          }
-          {
-            key = "<leader>tf";
-            mode = ["n"];
-            action = ":ToggleTerm direction=float<CR>";
-            silent = true;
-            desc = "ToggleTerm float";
-          }
-          {
-            key = "<leader>tv";
-            mode = ["n"];
-            action = ":ToggleTerm direction=vertical<CR>";
-            silent = true;
-            desc = "ToggleTerm vertical";
-          }
-          {
-            key = "<leader>th";
-            mode = ["n"];
-            action = ":ToggleTerm direction=horizontal<CR>";
-            silent = true;
-            desc = "ToggleTerm horizontal";
+            desc = "Focus Neo-tree [Neo-tree]";
           }
         ];
       };
