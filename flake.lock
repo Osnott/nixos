@@ -36,6 +36,26 @@
         "type": "github"
       }
     },
+    "flux": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1729388191,
+        "narHash": "sha256-Ga5JJPgwfpqMFvk8g4un7ySwfTefGCsbUrCDsSnQyiU=",
+        "owner": "IogaMaster",
+        "repo": "flux",
+        "rev": "400896b5c977e0569ea0f8bacb9b42509e0bbd00",
+        "type": "github"
+      },
+      "original": {
+        "owner": "IogaMaster",
+        "repo": "flux",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -185,6 +205,7 @@
     },
     "root": {
       "inputs": {
+        "flux": "flux",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "nixpkgs-stable": "nixpkgs-stable",

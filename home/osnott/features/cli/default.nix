@@ -14,5 +14,6 @@
     alejandra # nix formatter
     nil # nix lsp
     lazygit # git tui tool
+    mcman # minecraft server management cli tool
   ];
 }
