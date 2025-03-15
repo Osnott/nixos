@@ -1,4 +1,11 @@
-{inputs, ...}: {
+{
+  inputs,
+  lib,
+  ...
+}: let
+  inherit (lib.options) mkEnableOption;
+  inherit (lib.nvim.binds) mkMappingOption;
+in {
   imports = [
     inputs.nvf.homeManagerModules.default
   ];
@@ -134,28 +141,28 @@
             mode = ["n"];
             action = ":Neotree focus<CR>";
             silent = true;
-            desc = "Open Neotree";
+            desc = "Focus Neotree [Neotree]";
           }
           {
             key = "<leader>tf";
             mode = ["n"];
             action = ":ToggleTerm direction=float<CR>";
             silent = true;
-            desc = "ToggleTerm float";
+            desc = "Open floating [Toggleterm]";
           }
           {
             key = "<leader>tv";
             mode = ["n"];
             action = ":ToggleTerm direction=vertical<CR>";
             silent = true;
-            desc = "ToggleTerm vertical";
+            desc = "Open vertical [ToggleTerm]";
           }
           {
             key = "<leader>th";
             mode = ["n"];
             action = ":ToggleTerm direction=horizontal<CR>";
             silent = true;
-            desc = "ToggleTerm horizontal";
+            desc = "Open horizontal [ToggleTerm]";
           }
         ];
       };
