@@ -8,7 +8,7 @@
 
 ### taffy
 
-- [ ] minecraft configuration *possibly via a module?*
+- [ ] minecraft configuration *possibly via a module?* **checkout [flux](https://github.com/IogaMaster/flux) as flake input?**
 - [ ] possible nas setup?
 
 ## home
