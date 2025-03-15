@@ -60,7 +60,14 @@
           neo-tree.enable = true;
         };
 
-        tabline.nvimBufferline.enable = true;
+        tabline.nvimBufferline = {
+          enable = true;
+
+          setupOpts.options = {
+            numbers = "none";
+            seperator_style = "slant";
+          };
+        };
 
         binds = {
           whichKey.enable = true;

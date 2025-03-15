@@ -16,7 +16,8 @@
 ### nvf
 
 - [ ] fix binds using nvf's custom lib functions
-- [ ] fix bufferline icon issues
+- [x] fix bufferline icon issues
+    - turns out not icon issues, was just showing the id of the buffer. still ugly, removed it
 - [ ] fix notification conflicts
 
 ## pkgs
