@@ -2,14 +2,12 @@
   lib,
   config,
   ...
-}:
-# let
-#  inherit (lib) mkIf;
-#  packageNames = map (p: p.pname or p.name or null) config.home.packages;
-#  hasPackage = name: lib.any (x: x == name) packageNames;
-#  hasEza = hasPackage "eza";
-#in
-{
+}: let
+  inherit (lib) mkIf;
+  packageNames = map (p: p.pname or p.name or null) config.home.packages;
+  hasPackage = name: lib.any (x: x == name) packageNames;
+  hasEza = hasPackage "eza";
+in {
   imports = [
     ./starship.nix
   ];
