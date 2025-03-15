@@ -16,9 +16,9 @@ in {
     enable = true;
 
     shellAliases = {
-      ls = "eza --icons";
-      lsl = "eza -l --icons";
-      lsa = "eza -a --icons";
+      ls = mkIf hasEza "eza --icons";
+      lsl = mkIf hasEza "eza -l --icons";
+      lsa = mkIf hasEza "eza -a --icons";
 
       nrs = "nixos-rebuild switch --flake .";
       snrs = "sudo nixos-rebuild switch --flake .";
