@@ -15,10 +15,12 @@
 
 ### nvf
 
-- [ ] fix binds using nvf's custom lib functions
+- [-] fix binds using nvf's custom lib functions
+    - those lib functions turn out to be used for plugin definitions.
 - [x] fix bufferline icon issues
     - turns out not icon issues, was just showing the id of the buffer. still ugly, removed it
 - [ ] fix notification conflicts
+- [ ] fix overlapping keybinds
 
 ## pkgs
 
