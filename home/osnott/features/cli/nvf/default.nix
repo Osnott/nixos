@@ -1,11 +1,4 @@
-{
-  inputs,
-  lib,
-  ...
-}: let
-  inherit (lib.options) mkEnableOption;
-  inherit (lib.nvim.binds) mkMappingOption;
-in {
+{inputs, ...}: {
   imports = [
     inputs.nvf.homeManagerModules.default
   ];
@@ -98,6 +91,7 @@ in {
           toggleterm = {
             enable = true;
             lazygit.enable = true;
+            setupOpts.direction = "float";
           };
         };
 
@@ -114,6 +108,8 @@ in {
 
           fastaction.enable = true;
         };
+
+        mini.icons.enable = true;
 
         comments = {
           comment-nvim.enable = true;
@@ -141,28 +137,7 @@ in {
             mode = ["n"];
             action = ":Neotree focus<CR>";
             silent = true;
-            desc = "Focus Neotree [Neotree]";
-          }
-          {
-            key = "<leader>tf";
-            mode = ["n"];
-            action = ":ToggleTerm direction=float<CR>";
-            silent = true;
-            desc = "Open floating [Toggleterm]";
-          }
-          {
-            key = "<leader>tv";
-            mode = ["n"];
-            action = ":ToggleTerm direction=vertical<CR>";
-            silent = true;
-            desc = "Open vertical [ToggleTerm]";
-          }
-          {
-            key = "<leader>th";
-            mode = ["n"];
-            action = ":ToggleTerm direction=horizontal<CR>";
-            silent = true;
-            desc = "Open horizontal [ToggleTerm]";
+            desc = "Focus Neo-tree [Neo-tree]";
           }
         ];
       };
