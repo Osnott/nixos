@@ -16,6 +16,10 @@
     # nvf
     nvf.url = "github:notashelf/nvf";
     nvf.inputs.nixpkgs.follows = "nixpkgs";
+
+    # flux
+    flux.url = "github:IogaMaster/flux";
+    flux.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
