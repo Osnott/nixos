@@ -17,5 +17,6 @@
     mcman # minecraft server management cli tool
     packwiz # minecraft modpack managemer
     gnumake # make
+    gcc11 # gcc11 (c++, g++, cc, gcc, ld, etc.)
   ];
 }
