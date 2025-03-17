@@ -16,5 +16,6 @@
     lazygit # git tui tool
     mcman # minecraft server management cli tool
     packwiz # minecraft modpack managemer
+    gnumake # make
   ];
 }
