@@ -19,5 +19,6 @@
     gnumake # make
     gcc11 # gcc11 (c++, g++, cc, gcc, ld, etc.)
     cargo # rust compiler
+    hugo # static site generator
   ];
 }
