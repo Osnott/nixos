@@ -1,10 +1,10 @@
 {pkgs, ...}: {
   imports = [
     ./zsh
-    ./nvf
 
     ./git.nix
     ./gh.nix
+    ./nvchad.nix
   ];
 
   home.packages = with pkgs; [
@@ -18,5 +18,6 @@
     packwiz # minecraft modpack managemer
     gnumake # make
     gcc11 # gcc11 (c++, g++, cc, gcc, ld, etc.)
+    cargo # rust compiler
   ];
 }
