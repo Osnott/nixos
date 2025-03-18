@@ -12,14 +12,6 @@
     # example = prev.example.overrideAttrs (oldAttrs: rec {
     # ...
     # });
-
-    playit = prev.playit.overrideAttrs (finalAttrs: oldAttrs: {
-      cargoDeps = oldAttrs.cargoDeps.overrideAttrs (prev.lib.const {
-        name = "${oldAttrs.pname}-${oldAttrs.version}-vendor.tar.gz";
-        inherit (oldAttrs) src;
-        outputHash = "sha256-Vf/uA64BUxxG1QRRHma+gARPJTrteOtU+gFSum2mJw4=";
-      });
-    });
   };
 
   stable = final: _: {

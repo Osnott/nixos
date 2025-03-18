@@ -19,7 +19,7 @@
 
     # flux
     flux.url = "github:IogaMaster/flux";
-    flux.inputs.nixpkgs.follows = "nixpkgs";
+    flux.inputs.nixpkgs.follows = "nixpkgs-stable";
   };
 
   outputs = {
