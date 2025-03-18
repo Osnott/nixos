@@ -13,9 +13,14 @@
     # system
     systems.url = "github:nix-systems/default-linux";
 
-    # nvf
-    nvf.url = "github:notashelf/nvf";
-    nvf.inputs.nixpkgs.follows = "nixpkgs";
+    # nvchad starter
+    custom-nvchad-starter.url = "github:Osnott/nvchad";
+    custom-nvchad-starter.flake = false;
+
+    # nvchad4nix
+    nvchad4nix.url = "github:nix-community/nix4nvchad";
+    nvchad4nix.inputs.nixpkgs.follows = "nixpkgs";
+    nvchad4nix.inputs.nvchad-starter.follows = "custom-nvchad-starter";
 
     # flux
     flux.url = "github:IogaMaster/flux";
