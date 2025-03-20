@@ -3,11 +3,11 @@
     "custom-nvchad-starter": {
       "flake": false,
       "locked": {
-        "lastModified": 1742339237,
-        "narHash": "sha256-2546SDmouS4NyZP901U0uWJiv70gSNgfgNBbAAi98Vw=",
+        "lastModified": 1742434201,
+        "narHash": "sha256-AYjl5taIDSQyOxMrg8fhJEo5rIUHyQsVE664E8Q+/F8=",
         "owner": "Osnott",
         "repo": "nvchad",
-        "rev": "85fdf958f82d4dc766c0333877b124de1981fbe8",
+        "rev": "03ee048268972408835cef7283eb1a17493f03ca",
         "type": "github"
       },
       "original": {
