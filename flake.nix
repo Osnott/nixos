@@ -25,6 +25,9 @@
     # flux
     flux.url = "github:IogaMaster/flux";
     flux.inputs.nixpkgs.follows = "nixpkgs-stable";
+
+    # pre-commit hooks
+    pre-commit-hooks.url = "github:cachix/git-hooks.nix";
   };
 
   outputs = {
@@ -45,7 +48,10 @@
           config.allowUnfree = true;
         }
     );
+
     forAllSystems = f: nixpkgs.lib.genAttrs (import systems) (system: f pkgsFor.${system});
+
+    hooks = import ./hooks {inherit lib;};
   in {
     inherit lib;
     # custom packages
@@ -62,6 +68,18 @@
     # Reusable home-manager modules you might want to export
     # These are usually stuff you would upstream into home-manager
     homeManagerModules = import ./modules/home-manager;
+
+    # checks (pre-commit hooks)
+    checks = forAllSystems (pkgs: {
+      pre-commit-check = inputs.pre-commit-hooks.lib.${pkgs.system}.run hooks;
+    });
+
+    devShells = forAllSystems (pkgs: {
+      default = pkgs.mkShell {
+        inherit (self.checks.${pkgs.system}.pre-commit-check) shellHook;
+        buildInputs = self.checks.${pkgs.system}.pre-commit-check.enabledPackages;
+      };
+    });
 
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
