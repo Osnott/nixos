@@ -11,5 +11,6 @@
       clang-tools
     ];
     hm-activation = true;
+    backup = false;
   };
 }
