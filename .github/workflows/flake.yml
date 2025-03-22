@@ -1,0 +1,36 @@
+name: "Build and check flake"
+on:
+  pull_request:
+  push:
+    branches: [main, devel]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+          host:
+            - taffy
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v4
+        with:
+          token: "${{ secrets.GITHUB_TOKEN }}"
+          
+      - name: "Install Nix"
+        uses: DeterminateSystems/nix-installer-action@main
+        
+      - name: "Nix Magic Cache"
+        uses: DeterminateSystems/magic-nix-cache-action@main
+        
+      - name: "Install nix-fast-build"
+        run: nix profile install nixpkgs#nix-fast-build
+      
+      - name: "Build systems"
+      - run: |
+          nix-fast-build --skip-cached --no-nom \
+            --flake .#nixosConfigurations.${{ matrix.host }}.config.system.build.toplevel
+      
+      - name: "Check flake"
+        run: nix flake check
