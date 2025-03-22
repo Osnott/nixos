@@ -21,8 +21,8 @@ jobs:
       - name: "Install Nix"
         uses: DeterminateSystems/nix-installer-action@main
         
-      - name: "Nix Magic Cache"
-        uses: DeterminateSystems/magic-nix-cache-action@main
+      - name: "Flakehub Cache"
+        uses: DeterminateSystems/flakehub-cache-action@main 
         
       - name: "Install nix-fast-build"
         run: nix profile install nixpkgs#nix-fast-build
