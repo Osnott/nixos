@@ -8,6 +8,7 @@
       gpg.format = "ssh";
 
       push.autoSetupRemote = true;
+      pull.rebase = false;
     };
 
     signing = {
