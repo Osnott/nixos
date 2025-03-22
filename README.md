@@ -1,4 +1,5 @@
 [![built with nix](https://img.shields.io/static/v1?logo=nixos&logoColor=white&label=&message=Built%20with%20Nix&color=41439a)](https://builtwithnix.org)
+[![build status](https://img.shields.io/github/actions/workflow/status/Osnott/nixos/flake.yml)](https://github.com/Osnott/nixos/actions)
 
 # NixOS configuration
 
