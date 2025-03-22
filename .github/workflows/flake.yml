@@ -24,10 +24,10 @@ jobs:
       - name: "Install Nix"
         uses: nixbuild/nix-quick-install-action@v30
         
-      - name: "Flakehub Cache"
+      - name: "Nix Cache"
         uses: nix-community/cache-nix-action@v6
-          with:
-            # restore and save a cache using this key
+        with:
+          # restore and save a cache using this key
           primary-key: nix-${{ runner.os }}-${{ hashFiles('**/*.nix', '**/flake.lock') }}
           # if there's no cache hit, restore a cache by this prefix
           restore-prefixes-first-match: nix-${{ runner.os }}-
