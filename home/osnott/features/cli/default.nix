@@ -5,6 +5,7 @@
     ./git.nix
     ./gh.nix
     ./nvchad.nix
+    ./tmux.nix
   ];
 
   home.packages = with pkgs; [
