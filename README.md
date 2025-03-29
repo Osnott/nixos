@@ -1,5 +1,3 @@
-[![built with nix](./badge.svg)](https://builtwithnix.org)
-
 # NixOS configuration
 
 general structure of my configuration is taken from [Misterio77](https://github.com/Misterio77) on GitHub. both their [starter config repo](https://github.com/Misterio77/nix-starter-config) and [personal configuration](https://github.com/Misterio77/nix-config) were very helpful for setting this up
