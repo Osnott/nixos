@@ -32,11 +32,6 @@
   };
 
   programs = {
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-    };
-
     home-manager.enable = true;
     git.enable = true;
   };

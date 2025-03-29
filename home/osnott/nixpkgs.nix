@@ -10,15 +10,15 @@ in {
     settings = {
       experimental-features = [
         "nix-command"
-	"flakes"
-	#"ca-derivations
+        "flakes"
+        #"ca-derivations
       ];
       warn-dirty = false;
       flake-registry = "";
     };
     registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
   };
-  
+
   home.sessionVariables = {
     NIX_PATH = lib.concatStringsSep ":" (lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs);
   };

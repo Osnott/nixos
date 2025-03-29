@@ -1,0 +1,23 @@
+# thanks NotAShelf/nyx
+name: Cleanup
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: 0 0 1 * *
+    - cron: 0 0 15 * *
+jobs:
+  housekeeping:
+    name: Cleanup old branches
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Delete old branches
+        uses: beatlabs/delete-old-branches-action@v0.0.10
+        with:
+          repo_token: ${{ github.token }}
+          date: '2 months ago'
+          dry_run: false
+          delete_tags: false
+          extra_protected_branch_regex: ^(main|devel)$
+          exclude_open_pr_branches: true

@@ -10,6 +10,7 @@
     ../common/users/osnott
 
     ../common/optional/motd.nix
+    ../common/optional/flux
   ];
 
   networking.hostName = "taffy";
