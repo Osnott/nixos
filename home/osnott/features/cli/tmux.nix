@@ -14,6 +14,8 @@
 
     escapeTime = 50;
 
+    baseIndex = 1;
+
     extraConfig = ''
       set -g default-terminal "xterm-256color"
       set -ga terminal-overrides ",*256col*:Tc"
