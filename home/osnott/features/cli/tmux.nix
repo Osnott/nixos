@@ -12,7 +12,9 @@
 
     shortcut = "a";
 
-    escapeTime = 100;
+    escapeTime = 50;
+
+    baseIndex = 1;
 
     extraConfig = ''
       set -g default-terminal "xterm-256color"
