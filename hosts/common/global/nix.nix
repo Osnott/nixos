@@ -11,6 +11,7 @@ in {
       experimental-features = "nix-command flakes";
       flake-registry = "";
       nix-path = config.nix.nixPath;
+      accept-flake-config = false; # disable insecure `nixConfig` option in flakes https://blog.notashelf.dev/posts/2025-03-31-reject-flake-config.html
     };
 
     channel.enable = false;
