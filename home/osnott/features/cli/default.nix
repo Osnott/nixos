@@ -25,5 +25,6 @@
     tinymist # lsp for typst
     typstfmt # formatter for typst
     websocat # cli for websockets
+    rcon # remote cli control for game servers
   ];
 }
