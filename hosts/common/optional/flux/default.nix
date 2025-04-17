@@ -11,19 +11,19 @@
     enable = true;
 
     servers = {
-      # taffy-default = {
-      #   package = pkgs.mkMinecraftServer {
-      #     name = "taffy-default";
-      #     src = ./servers/mc/default;
-      #     hash = "sha256-C50y0s3N/R2UpFBjf0yiINB7oUjphv0xN9EzPM+2+lk=";
-      #   };
-      #
-      #   proxy = {
-      #     enable = true;
-      #
-      #     backend = "playit";
-      #   };
-      # };
+      prominence-2-he = {
+        package = pkgs.mkMinecraftServer {
+          name = "prominence-2-he";
+          src = ./servers/mc/prominence_2;
+          hash = "sha256-wBhrAIQgqZjc9AZQCdALyfvOjtV1ZM9jGRqJENgMS1o=";
+        };
+
+        proxy = {
+          enable = true;
+
+          backend = "playit";
+        };
+      };
     };
   };
 }
