@@ -24,7 +24,7 @@
 
     # flux
     flux.url = "github:IogaMaster/flux";
-    flux.inputs.nixpkgs.follows = "nixpkgs-stable";
+    flux.inputs.nixpkgs.follows = "nixpkgs";
 
     # pre-commit hooks
     pre-commit-hooks.url = "github:cachix/git-hooks.nix";
