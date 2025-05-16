@@ -26,5 +26,7 @@
     typstfmt # formatter for typst
     websocat # cli for websockets
     rcon # remote cli control for game servers
+    zip # compressor/archiver for creating and modifying zip files
+    nix-search # cli client for searching nix-pkgs
   ];
 }

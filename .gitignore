@@ -7,3 +7,4 @@
 **/.env
 # ignore pre-commit-config devShell yaml
 /.pre-commit-config.yaml
+
