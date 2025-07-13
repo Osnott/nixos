@@ -1,11 +1,12 @@
 name = "taffy-default"
-mc_version = "1.21.4"
+mc_version = "1.21.7"
 
 [jar]
 type = "paper"
 
 [variables]
-SERVER_PORT = "25565"
+SERVER_PORT = "25567"
+ONLINE_MODE = "false"
 
 [launcher]
 eula_args = true
