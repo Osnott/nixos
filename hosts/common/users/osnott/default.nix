@@ -10,7 +10,7 @@ in {
     shell = pkgs.zsh;
 
     extraGroups = ifTheyExist [
-      "wheel"
+      "wheel" "networkmanager"
     ];
 
     openssh.authorizedKeys.keys = [

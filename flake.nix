@@ -26,6 +26,11 @@
     flux.url = "github:IogaMaster/flux";
     flux.inputs.nixpkgs.follows = "nixpkgs-stable";
 
+    # zen browser
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    zen-browser.inputs.nixpkgs.follows = "nixpkgs";
+    zen-browser.inputs.home-manager.follows = "home-manager";
+
     # pre-commit hooks
     pre-commit-hooks.url = "github:cachix/git-hooks.nix";
   };
@@ -91,6 +96,13 @@
           ./hosts/taffy
         ];
       };
+
+      butterscotch = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+	modules = [
+	  ./hosts/butterscotch
+	];
+      };
     };
 
     # Standalone home-manager configuration entrypoint
@@ -104,6 +116,15 @@
           ./home/osnott/taffy.nix
           ./home/osnott/nixpkgs.nix
         ];
+      };
+
+      "osnott@butterscotch" = home-manager.lib.homeManagerConfiguration {
+        pkgs = pkgsFor.x86_64-linux;
+	extraSpecialArgs = {inherit inputs outputs;};
+	modules = [
+          ./home/osnott/butterscotch.nix
+	  ./home/osnott/nixpkgs.nix
+	];
       };
     };
   };
