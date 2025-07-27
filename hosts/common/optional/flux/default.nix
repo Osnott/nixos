@@ -52,11 +52,26 @@
         };
 
         proxy = {
-          enable = true;
+          enable = false;
 
           backend = "playit";
         };
       };
+
+      # default = {
+      #   package = pkgs.mkMinecraftServer {
+      #     name = "default";
+      #     src = ./servers/mc/default;
+      #     hash = "sha256-4ZEX6ZVuUUQFZY1DH/0E0jus8AZMIo4Hcw6M6K1TA2o=";
+      #   };
+      #
+      #   proxy = {
+      #     enable = false;
+      #   };
+      # };
     };
   };
+
+  # networking.firewall.allowedTCPPorts = [ 25565 ];
+  # networking.firewall.allowedUDPPorts = [ 25565 ];
 }
