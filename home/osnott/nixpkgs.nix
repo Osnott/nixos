@@ -27,8 +27,8 @@ in {
     overlays = builtins.attrValues outputs.overlays;
 
     config = {
-      allowUnfreee = true;
-      allowUndreePredicate = _: true;
+      allowUnfree = true;
+      allowUnfreePredicate = _: true;
     };
   };
 }
