@@ -1,4 +1,7 @@
-{pkgs, ...}: {
+{pkgs, ...}:
+let
+  wallpaper = "$HOME/.wallpapers/ralsei.jpg";
+in {
   wayland.windowManager.hyprland = { 
     enable = true;
 
@@ -41,6 +44,11 @@
         "fullscreen_opacity" = 1;
       };
 
+      "layerrule" = [
+        "ignorealpha 0, ^(rofi)$"
+        "dimaround, ^(rofi)$"
+      ];
+
       animations = {
         "enabled" = "yes";
 
@@ -74,6 +82,23 @@
             ]
           )9)
           );
+    };
+  };
+
+  services.hyprpaper = {
+    enable = true;
+
+    settings = {
+      ipc = true;
+      splash = false;
+
+      preload = [
+        (builtins.toString wallpaper)
+      ];
+
+      wallpaper = [
+        ",${builtins.toString wallpaper}"
+      ];
     };
   };
 }
