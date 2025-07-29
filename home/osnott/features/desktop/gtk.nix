@@ -1,7 +1,17 @@
-{...}: {
+{pkgs, ...}: {
   catppuccin.gtk = {
     enable = true;
+    accent = "pink";
+    size = "standard";
+    tweaks = [ "normal" ];
+  };
 
-    icon.enable = true;
+  gtk = {
+    enable = true;
+
+    iconTheme = {
+      name = "Adwaita";
+      package = pkgs.adwaita-icon-theme;
+    };
   };
 }
