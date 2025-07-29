@@ -69,9 +69,10 @@ in {
 
       "$mod" = "SUPER";
       bind = [
-        "$mod, RETURN, exec, kitty"
         "$mod, C, killactive"
         "$mod, M, exit"
+        "$mod, RETURN, exec, kitty"
+        "$mod, R, exec, rofi -show drun -show-icons"
       ]
       ++ (
           builtins.concatLists (builtins.genList (i:

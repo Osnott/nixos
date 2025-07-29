@@ -1,12 +1,13 @@
 {config, pkgs, ...}: {
   programs.rofi = {
     enable = true;
+    package = pkgs.rofi-wayland;
     terminal = "${pkgs.kitty}/bin/kitty";
     modes = [ "drun" ];
     extraConfig = {
       disable-history = false;
       display-drun = "   Apps ";
-      icon-theme = "Papirus";
+      icon-theme = "Adwaita";
       drun-display-format = "{icon} {name}";
       hide-scrollbar = true;
       sidebar-mode = true;
@@ -53,6 +54,7 @@
         "margin" = mkLiteral "10px 0px 0px 20px";
         "columns" = 2;
         "lines" = 6;
+        "scrollbar" = mkLiteral "false";
       };
 
       "#textbox-prompt-colon" = {
