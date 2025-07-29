@@ -12,6 +12,7 @@
     ../common/optional/nvidia.nix
     ../common/optional/hyprland.nix
     ../common/optional/sddm.nix
+    ../common/optional/pipewire.nix
   ];
 
   networking.hostName = "butterscotch";
