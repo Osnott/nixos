@@ -31,6 +31,9 @@
     zen-browser.inputs.nixpkgs.follows = "nixpkgs";
     zen-browser.inputs.home-manager.follows = "home-manager";
 
+    # catpuccin
+    catppuccin.url = "github:catppuccin/nix";
+
     # pre-commit hooks
     pre-commit-hooks.url = "github:cachix/git-hooks.nix";
   };
