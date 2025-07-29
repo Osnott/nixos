@@ -18,6 +18,14 @@
     accent = "lavender";
   };
 
+  home.pointerCursor = {
+    name = "macOS";
+    package = pkgs.apple-cursor;
+    size = 24;
+    gtk.enable = true;
+    x11.enable = true;
+  };
+
   home.packages = with pkgs; [
     wayvnc
     puredata
