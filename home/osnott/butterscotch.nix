@@ -2,7 +2,7 @@
   imports = [
     ./global
 
-    ./features/hyprland.nix
+    ./features/hypr.nix
     ./features/desktop
   ];
 }
