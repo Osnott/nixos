@@ -15,6 +15,7 @@ jobs:
       matrix:
           host:
             - taffy
+            - butterscotch
     steps:
       - name: "Checkout"
         uses: actions/checkout@v4
