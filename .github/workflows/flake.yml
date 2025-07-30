@@ -22,6 +22,12 @@ jobs:
         with:
           token: "${{ secrets.GITHUB_TOKEN }}"
           lfs: true
+
+      # purges unnecessary system files
+      - name: "Setup Nothing but Nix"
+        uses: wimpysworld/nothing-but-nix@main
+        with:
+          hatchet-protocol: "cleave"
           
       - name: "Install Nix"
         uses: nixbuild/nix-quick-install-action@v30
