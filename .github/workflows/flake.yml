@@ -2,7 +2,7 @@ name: "Build and check flake"
 on:
   pull_request:
   push:
-    branches: [main, devel]
+    branches: [main, devel, ci]
 
 permissions:
   actions: write
