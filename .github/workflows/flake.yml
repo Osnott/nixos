@@ -27,7 +27,7 @@ jobs:
       - name: "Setup Nothing but Nix"
         uses: wimpysworld/nothing-but-nix@main
         with:
-          hatchet-protocol: "cleave"
+          hatchet-protocol: "rampage" # MORE SPACE
           # make sure /nix is writable
           nix-permission-edict: true
           
