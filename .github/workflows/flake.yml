@@ -4,6 +4,8 @@ on:
   push:
     branches: [main, devel, ci]
 
+runs-on: nixos
+
 permissions:
   actions: write
 
